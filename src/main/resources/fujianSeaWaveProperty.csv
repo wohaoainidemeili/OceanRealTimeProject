@@ -1,0 +1,3 @@
+time,getDT
+urn:ogc:def:property:OGC:1.0:significantWaveHeight,getGcDate1
+urn:ogc:def:property:OGC:1.0:maxWaveHeight,getGcDate2

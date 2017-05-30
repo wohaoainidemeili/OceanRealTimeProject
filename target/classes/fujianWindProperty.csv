@@ -1,0 +1,5 @@
+time,getDT
+urn:ogc:def:property:OGC:1.0:windSpeed,getGcDate1
+urn:ogc:def:property:OGC:1.0:windSpeedMax,getGcDate2
+urn:ogc:def:property:OGC:1.0:windDirection,getFengxiang
+urn:ogc:def:property:OGC:1.0:windLevel,getGcDate1
