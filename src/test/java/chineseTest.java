@@ -1,3 +1,5 @@
+import yuan.ocean.InsertObservationService.InsertOper.fujianInsert;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,6 +12,9 @@ public class chineseTest {
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("MM'月'dd'日'HH'时'mm'分'");
         try {
             Date date=simpleDateFormat.parse("05月27日09时30分");
+            fujianInsert fujianInsert=new fujianInsert();
+            String re =fujianInsert.getTime("05月27日09时30分");
+
             int x=0;
         } catch (ParseException e) {
             e.printStackTrace();

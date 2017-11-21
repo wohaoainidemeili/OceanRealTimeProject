@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.TimeZone;
 
 /**
  * Created by Yuan on 2017/5/27.
@@ -84,12 +85,14 @@ public class fujianInsert implements IInsertOper {
 
     public String getTime(String timeStr) {
         String resultTimeStr=null;
-        timeStr="2017年"+timeStr;
+        Date dateNow = new Date();
+        int year= dateNow.getYear()+1900;
+        timeStr=year+"年"+timeStr;
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy年MM'月'dd'日'HH'时'mm'分'");
-        SimpleDateFormat resultDateFormat=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        SimpleDateFormat resultDateFormat=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'+08:00'");
         try {
             Date date=simpleDateFormat.parse(timeStr);
-           resultTimeStr=resultDateFormat.format(date);
+            resultTimeStr=resultDateFormat.format(date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
